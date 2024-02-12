@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Classification</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .container {
+    text-align: center;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 60%; /* Adjust the width as needed */
+  }
+  .header {
+    background-color: #4f4841;
+    color: white;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+  }
+  .sub-heading {
+    background-color: #4f4841; /* Color for the subheading box */
+    color: white;
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    margin-top: -20px; /* Adjust the margin to overlap with the header */
+  }
+  .predict-button {
+    background-color: #0044cc;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+  .predict-button:hover {
+    background-color: #0055ff;
+  }
+  .input-field {
+    width: 80%;
+    padding: 0.5em;
+    margin-top: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .footer {
+    margin-top: 2em;
+    font-size: 0.8em;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+  <form action='/predict' method='post'>
+  <div class="header">
+    <h1>Author Classification</h1>
+  </div>
+  <div class="sub-heading">
+    <p>Enter a sentence and we'll tell you which author it belongs to.</p>
+  </div>
+  <input type="text" name="text" class="input-field" placeholder="Example: It was a dark and stormy night...">
+  <button type="submit" class="predict-button">Predict</button>
+</form>
+
+  </div>
+</body>
+</html>

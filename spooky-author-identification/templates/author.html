@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Classification</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .container {
+    text-align: center;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 60%;
+  }
+  .header {
+    background-color: #4f4841;
+    color: white;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+  }
+  .sub-heading {
+    background-color: #4f4841; /* Color for the subheading box */
+    color: white;
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    margin-top: -20px; /* Adjust the margin to overlap with the header */
+  }
+  .result-container {
+    margin-top: 1em;
+  }
+  .result-box {
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+  }
+  .footer {
+    margin-top: 2em;
+    font-size: 0.8em;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Author Classification</h1>
+    </div>
+    <div class="sub-heading">
+        <p>The sentence you entered was written by.</p>
+    </div>
+    <div class="result-container">
+      <div class="result-box" id="predictedAuthorBox"></div>
+      <div class="result-box" id="mwsInfoBox"></div>
+    </div>
+    <div class="footer">
+      <a href="/">Go back to index</a>
+    </div>
+    <script>
+      // Parse URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const predictedAuthor = urlParams.get('author');
+      const mwsInfo = urlParams.get('mws');
+        
+       //Display the results
+      document.getElementById("predictedAuthorBox").innerHTML = "Predicted Author: " 
+      document.getElementById("mwsInfoBox").innerHTML = "MWS "
+      
+    </script>
+  </div>
+</body>
+</html>
